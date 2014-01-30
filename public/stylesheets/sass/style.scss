@@ -32,7 +32,6 @@
     
 body {
   //#09B
-  position: relative;
   background-color: #000;
   color: #FFF;
 
@@ -44,11 +43,24 @@ body {
   .header {
     z-index: 20;
     font: inherit;
+
+    .hr_container {
+      width: 40%;
+      margin-left: 30%;
+      padding: 0px;
+
+      .hr_white {
+        background-color: #FFF;
+        margin-top: 2px;
+        height: 2px;
+        width: 30%;
+        margin-left: 35%;
+      }
+    }
   
   }
-  .center {
-    text-align: center;
-  }
+
+  .center { text-align: center; }
 
   .bg {
     //@include background-image(url("/images/botld.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
@@ -59,6 +71,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 100;
+    right: 100;
     height: 100%;
     width: 100%;
   }
@@ -70,8 +84,6 @@ body {
 
   .characters{
     width: 100%;
-    overflow: hidden;
-
      .fade-in{ 
       background-color: #000;
       border: 1px solid #FFF;
@@ -80,7 +92,6 @@ body {
       float: left;
       position: relative;
       width: 18.5%;
-      overflow: hidden;
       opacity: 0;
       @include animation(fadeIn 1.0s ease-in); 
       -webkit-animation-fill-mode:forwards;
@@ -112,21 +123,6 @@ body {
     margin-right: 0%;
     animation-delay: 2.0s;
     -webkit-animation-delay: 2.0s;
-  }
-
-
-  .hr_container {
-    width: 40%;
-    margin-left: 30%;
-    padding: 0px;
-
-    .hr_white {
-      background-color: #FFF;
-      margin-top: 2px;
-      height: 2px;
-      width: 30%;
-      margin-left: 35%;
-    }
   }
 
   ul.list {
