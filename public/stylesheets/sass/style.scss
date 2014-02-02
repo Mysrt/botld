@@ -32,8 +32,10 @@
     
 body {
   //#09B
-  background-color: #000;
   color: #FFF;
+  background: url("/images/the_plan2.jpg");
+  background-position: center center;
+  background-size: cover; 
 
   .righteous {
     font-family: 'Butcherman', cursive;
@@ -41,8 +43,15 @@ body {
   }
 
   .header {
+    position: relative;
     z-index: 20;
     font: inherit;
+
+    h2 {
+      font-size: 60px;
+      padding: 0px;
+      margin: 0px;
+    }
 
     .hr_container {
       width: 40%;
@@ -52,39 +61,49 @@ body {
       .hr_white {
         background-color: #FFF;
         margin-top: 2px;
+        margin-bottom: 0px;
         height: 2px;
         width: 30%;
         margin-left: 35%;
       }
     }
-  
+
+
+    ul.list {
+      list-style: none;
+      font: inherit;
+      padding-left: 0px;
+      font-size: 20px;
+
+        
+      li {
+        font: inherit;
+        display: inline-block;
+        padding-right: 13px;
+
+        a {
+          font: inherit;
+          color: #FFF;
+          text-decoration: none;
+        }
+      
+      }
+    }
+    
   }
 
   .center { text-align: center; }
 
-  .bg {
-    //@include background-image(url("/images/botld.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
-    background: url("/images/botld.png");
-    background-repeat: no-repeat;
-    opacity: 0.3;
-    z-index: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 100;
-    right: 100;
-    height: 100%;
-    width: 100%;
-  }
-
-
   h2 {
+    color: #FFF;
     margin-bottom: 0px;
   }
 
   .characters{
-    width: 100%;
-     .fade-in{ 
+    margin-left: 30%;
+    margin-top: 10px;
+
+    .fade-in{ 
       background-color: #000;
       border: 1px solid #FFF;
       margin-right: 1%;
@@ -96,13 +115,25 @@ body {
       @include animation(fadeIn 1.0s ease-in); 
       -webkit-animation-fill-mode:forwards;
       animation-fill-mode:forwards;
-      
+      overflow: hidden;
+
       img {
         width: 90%;
         position: relative;
       }
+
+      //.caption {
+      //  margin-top: -300px;
+      //  min-height: 300px;
+      //  position: relative;
+      //  background: url('/images/bg_caption.png') center bottom repeat-x;
+      //  z-index: 100;
+      //  opacity: 1; 
+      //}
     }
+
   }
+
   .fade-in.chbale { 
     animation-delay: 2.0s;
     -webkit-animation-delay: 2.0s;  
@@ -116,33 +147,12 @@ body {
    // -webkit-animation-delay: 2.0s;
   }  
   .fade-in.chrenner {
-    animation-delay: 1.0s;
-    -webkit-animation-delay: 1.0s;
-  }  
-  .fade-in.chlawrence {
-    margin-right: 0%;
     animation-delay: 2.0s;
     -webkit-animation-delay: 2.0s;
-  }
-
-  ul.list {
-    list-style: none;
-    font: inherit;
-    padding-left: 0px;
-
-      
-    li {
-      font: inherit;
-      display: inline-block;
-      padding-right: 13px;
-
-      a {
-        font: inherit;
-        color: #FFF;
-        text-decoration: none;
-      }
-    
-    }
+  }  
+  .fade-in.chlawrence {
+    animation-delay: 2.0s;
+    -webkit-animation-delay: 2.0s;
   }
 
 }

@@ -1,44 +1,40 @@
-!!! 5
-%html
-  %head
-    %title Bong of the living dead
-    %link{rel: 'stylesheet', href: '/stylesheets/style.css'}
-    %link{rel: 'stylesheet', href:"http://fonts.googleapis.com/css?family=Butcherman", type: 'text/css'}
+%div.center.righteous
+  .bg
+    .header
+      %h2
+        Bong of the living dead
+      .hr_container
+        %hr
 
-    
-  %body
-    -#%img.botld{:src => "images/botld.png"}
-
-    %div.center.righteous
-      .bg
-      .header
-        %h2
-          Bong of the living dead
-        .hr_container
-          %hr
-    
       %ul.list
         %li
-          %a{:href => "#cast"}
-            Cast
+          %a{:href => "#cast"} Cast
         %li
-          %a{:href => "#trailer"}
-            Trailer
+          %a{:href => "#trailer"} Trailer
         %li
-          %a{:href => "#story"}
-            Story
+          %a{:href => "#story"} Story
         %li
-          %a{:href => "#videos"}
-            Videos
+          %a{:href => "#videos"} Videos
 
-      .characters
-        .fade-in.chbale
-          %img{:src => 'images/ch_bale.jpg'}
-        .fade-in.chcooper
-          %img{:src => 'images/ch_cooper.jpg'}
-        .fade-in.chadams
-          %img{:src => 'images/ch_adams.jpg'}
-        .fade-in.chrenner
-          %img{:src => 'images/ch_renner.jpg'}
-        .fade-in.chlawrence
-          %img{:src => 'images/ch_lawrence.jpg'}
+  .container-fluid
+    .characters.row
+      %a.fade-in.chbale
+        %img{:src => 'images/ch_bale.jpg'}
+        .caption
+      %a.fade-in.chadams
+        %img{:src => 'images/ch_adams.jpg'}
+        .caption
+      %a.fade-in.chlawrence
+        %img{:src => 'images/ch_lawrence.jpg'}
+        .caption
+
+    .characters.row
+      %a.fade-in.chrenner
+        %img{:src => 'images/ch_renner.jpg'}
+        .caption
+      %a.fade-in.chcooper
+        %img{:src => 'images/ch_cooper.jpg'}
+        .caption
+      %a.fade-in.chlawrence
+        %img{:src => 'images/ch_lawrence.jpg'}
+        .caption
