@@ -57,6 +57,11 @@ body {
   background: url("/images/the_plan2.jpg");
   background-position: center center;
   background-size: cover; }
+  body .moneygrabbin {
+    margin-top: 40px;
+    width: 40%;
+    height: 315px;
+    margin-left: 30%; }
   body .righteous {
     font-family: 'Butcherman', cursive;
     text-transform: uppercase; }
