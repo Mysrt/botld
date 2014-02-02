@@ -2,17 +2,33 @@
 
 @-webkit-keyframes fadeIn {
   from { opacity: 0; }
-	to { opacity: 1; }
+  to { opacity: 1; }
 }
 
 @-moz-keyframes fadeIn {
-	from { opacity: 0; }
-	to { opacity: 1; }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes fadeIn {
-	from { opacity: 0; }
-	to { opacity: 1; }
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+@-webkit-keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@-moz-keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 @font-face {
@@ -29,7 +45,7 @@
   font-weight: 400;
   src: local('Righteous'), local('righteous-regular'), url(http://themes.googleusercontent.com/static/fonts/righteous/v3/w5P-SI7QJQSDqB3GziL8XbO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
 }
-    
+
 body {
   //#09B
   color: #FFF;
@@ -75,7 +91,7 @@ body {
       padding-left: 0px;
       font-size: 20px;
 
-        
+
       li {
         font: inherit;
         display: inline-block;
@@ -86,10 +102,10 @@ body {
           color: #FFF;
           text-decoration: none;
         }
-      
+
       }
     }
-    
+
   }
 
   .center { text-align: center; }
@@ -122,15 +138,40 @@ body {
         position: relative;
       }
 
-      //.caption {
-      //  margin-top: -300px;
-      //  min-height: 300px;
-      //  position: relative;
-      //  background: url('/images/bg_caption.png') center bottom repeat-x;
-      //  z-index: 100;
-      //  opacity: 1; 
-      //}
     }
+
+    a {
+      color: #FFF;
+      text-decoration: none;
+      cursor: pointer;
+
+      .caption {
+        @include animation(fadeOut 0.5s ease-out); 
+        -webkit-animation-fill-mode:forwards;
+        animation-fill-mode:forwards;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('/images/bg_caption.png') center bottom repeat-x;
+        z-index: 100;      
+
+        .text{
+        
+          margin-top: 60%;
+          padding-top: 60%;
+        }
+
+      }
+      &:hover{
+        .caption {
+          @include animation(fadeIn 0.5s ease-in); 
+
+        }
+      }
+    }
+
 
   }
 
@@ -143,8 +184,8 @@ body {
     -webkit-animation-delay: 1.0s;
   }  
   .fade-in.chadams {
-   // animation-delay: 2.0s;
-   // -webkit-animation-delay: 2.0s;
+    // animation-delay: 2.0s;
+    // -webkit-animation-delay: 2.0s;
   }  
   .fade-in.chrenner {
     animation-delay: 2.0s;
